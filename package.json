@@ -1,0 +1,35 @@
+{
+  "name": "fastify-discover",
+  "version": "1.0.0",
+  "description": "Fastify discovering",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npm:dev:*\" -c green.bold,yellow.bold,blue.bold",
+    "dev:run": "nodemon dist/index.js | pino-pretty",
+    "dev:build": "tsc -w",
+    "dev:lint": "eslint . --ext .ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "keywords": [
+    "fastify",
+    "node"
+  ],
+  "author": "yumicode",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.48.0",
+    "pino": "^8.15.1",
+    "pino-pretty": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "fastify": "^4.22.2"
+  }
+}
